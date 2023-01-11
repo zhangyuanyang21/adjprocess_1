@@ -156,7 +156,8 @@ def construct_graph(dataset, features, topk):
     # fname = '../data/' + dataset + '/knn/tmp.txt'
     # fname = '../data/' + dataset + '/knn/tmp.txt'
     # fname = '../data/2V_MNIST_USPS/knn/tmp.txt'
-    fname = 'data/Caltech-5V/knn/tmp.txt'
+    datasetname = dataset[:-4]
+    fname = 'data/{}/knn/tmp.txt'.format(datasetname)
     print(fname)
     f = open(fname, 'w')
     ##### Kernel
@@ -199,9 +200,11 @@ def generate_knn(dataset):
         #f2 = open('../data/' + dataset + '/knn/c' + str(topk) + '.txt', 'w')
         # f1 = open('../data/2V_MNIST_USPS/knn/tmp.txt', 'r')
         # f2 = open('../data/2V_MNIST_USPS/knn/c' + str(topk) + '.txt', 'w')
-        f1 = open('data/Caltech-5V/knn/tmp.txt', 'r')
+        datasetname = dataset[:-4]
+        f1 = open(f'data/{datasetname}/knn/tmp.txt', 'r'.format(datasetname=datasetname))
         # f2 = open('data/2V_MNIST_USPS/knn/x1_' + str(topk) + '.txt', 'w')
-        f2 = open('data/Caltech-5V/knn/x5_' + str(topk) + '.txt', 'w')
+        file_path2 = 'data/{dataset}/knn/{xi}_{topk}.txt'.format(dataset=datasetname, xi='x5', topk=topk)
+        f2 = open(file_path2, 'w')
         lines = f1.readlines()
         for line in lines:
             start, end = line.strip('\n').split(' ')
