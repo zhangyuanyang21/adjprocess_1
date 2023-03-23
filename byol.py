@@ -19,6 +19,7 @@ from models import model_dict
 from models import fhjifjif
 from models import khgk
 from models import hfguidhglll
+from models import fhifj
 
 @model_dict.register('propos')
 class BYOL(TrainTask):
