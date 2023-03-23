@@ -18,6 +18,7 @@ from network import backbone_dict
 from models import model_dict
 from models import fhjifjif
 from models import khgk
+from models import hfguidhglll
 
 @model_dict.register('propos')
 class BYOL(TrainTask):
