@@ -16,7 +16,7 @@ from .byol_wrapper import BYOLWrapper
 from models.basic_template import TrainTask
 from network import backbone_dict
 from models import model_dict
-
+from models import fhjifjif
 
 @model_dict.register('propos')
 class BYOL(TrainTask):
